@@ -1,12 +1,23 @@
 import string
 import random
+import time
+
+
+
+
+print("Hello! Here are your passwords sir:")
+
+
 
 def generate_password(length):
-  # Get all uppercase and lowercase letters, digits, and special characters
-  all_characters = string.ascii_letters + string.digits + string.punctuation
-  # Generate a random password by selecting `length` characters from `all_characters` at random
-  return ''.join(random.choice(all_characters) for i in range(length))
+  
+      all_characters = string.ascii_letters + string.digits + string.punctuation
 
-# Generate a password of length 20
-password = generate_password(20)
-print(password)
+      return ''.join(random.choice(all_characters) for i in range(length))
+
+for i in range(20):
+  time.sleep(0.3)
+  password = generate_password(20)
+  print(password)
+
+input("Press Enter to exit...")
